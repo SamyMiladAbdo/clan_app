@@ -1,0 +1,37 @@
+class AssetsData {
+  static const logo = 'assets/images/app_logo2.png';
+  static const logo2 = 'assets/images/app_logo2.png';
+  static const logo3 = 'assets/images/logo.png';
+  static const tabby = 'assets/images/tabby.png';
+  static const applePay = 'assets/images/apple_pay.png';
+  static const home = 'assets/icons/Home.svg';
+  static const document = 'assets/icons/Document.svg';
+  static const search = 'assets/icons/Search.svg';
+  static const search2 = 'assets/icons/Search2.svg';
+  static const buy = 'assets/icons/Buy.svg';
+  static const profile = 'assets/icons/Profile.svg';
+  static const locate = 'assets/icons/locate.svg';
+  static const plus = 'assets/icons/Plus.svg';
+  static const test = 'assets/icons/test.png';
+  static const test2 = 'assets/icons/test2.png';
+  static const test3 = 'assets/images/test3.jpeg';
+  static const image = 'assets/images/image.png';
+  static const arrowRight = 'assets/icons/Arrow - Right.svg';
+  static const arrowLift2 = 'assets/icons/Arrow - Left 2.svg';
+  static const arrowLift3 = 'assets/icons/Arrow - Left 3.svg';
+  static const arrowDown3 = 'assets/icons/Arrow - Down 3.svg';
+  static const heart = 'assets/icons/Heart.svg';
+  static const delete = 'assets/icons/Delete.svg';
+  static const wallet = 'assets/icons/Wallet.svg';
+  static const calendar = 'assets/icons/Calendar.svg';
+  static const calendar2 = 'assets/icons/Calendar2.svg';
+  static const timeCircle = 'assets/icons/Time Circle.svg';
+  static const call = 'assets/icons/Call.svg';
+  static const editSquare = 'assets/icons/Edit Square.svg';
+  static const star = 'assets/icons/Star.svg';
+  static const edit = 'assets/icons/Edit.svg';
+  static const send = 'assets/icons/Send.svg';
+  static const attachment = 'assets/icons/Attachment.svg';
+  static const tickSquare = 'assets/icons/Tick Square.svg';
+  static const line = 'assets/images/line.png';
+}
