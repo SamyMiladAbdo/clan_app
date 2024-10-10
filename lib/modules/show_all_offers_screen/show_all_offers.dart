@@ -32,9 +32,7 @@ class ShowAllOffers extends StatelessWidget {
                   crossAxisSpacing: 13.0,
                   childAspectRatio: 1 / 2,
                   children: List.generate(4, (index) {
-                    return 
-                       const OfferWidget();
-                    
+                    return const OfferWidget();
                   }),
                 ),
               ),

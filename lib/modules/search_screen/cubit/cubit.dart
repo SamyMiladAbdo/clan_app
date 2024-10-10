@@ -27,6 +27,7 @@ class SearchCubit extends Cubit<SearchStates> {
     selectedButton1 = index;
     emit(ChangeSelectedButton1State());
   }
+
   void changeSelectedButton2(int index) {
     selectedButton2 = index;
     emit(ChangeSelectedButton2State());

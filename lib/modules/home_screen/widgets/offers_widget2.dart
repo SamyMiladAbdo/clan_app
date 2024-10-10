@@ -7,7 +7,6 @@ class OffersWidget2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipOval(
-
       child: Image.asset(
         AssetsData.test2,
         fit: BoxFit.cover,
@@ -16,7 +15,7 @@ class OffersWidget2 extends StatelessWidget {
         // color: Colors.blue,
       ),
     );
-    
+
     // return const CircleAvatar(
     //     radius: 43.5,
     //     backgroundImage: AssetImage(

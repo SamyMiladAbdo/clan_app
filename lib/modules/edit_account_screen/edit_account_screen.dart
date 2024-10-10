@@ -64,7 +64,7 @@ class EditAccountScreen extends StatelessWidget {
                 ),
               ),
               const VerticalSpace(6.0),
-              CustomTextFormFiled(
+              CustomTextFormField(
                 controller: nameController,
                 label: "الاسم الثلاثي",
                 keyboardType: TextInputType.name,
@@ -80,7 +80,7 @@ class EditAccountScreen extends StatelessWidget {
                 ),
               ),
               const VerticalSpace(6.0),
-              CustomTextFormFiled(
+              CustomTextFormField(
                 controller: emailController,
                 label: "البريد الإلكتروني",
                 keyboardType: TextInputType.emailAddress,
@@ -96,7 +96,7 @@ class EditAccountScreen extends StatelessWidget {
                 ),
               ),
               const VerticalSpace(6.0),
-              CustomTextFormFiled(
+              CustomTextFormField(
                 controller: phoneController,
                 label: "رقم الهاتف",
                 keyboardType: TextInputType.phone,

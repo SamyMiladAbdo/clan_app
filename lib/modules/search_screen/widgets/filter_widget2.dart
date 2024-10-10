@@ -22,11 +22,12 @@ class FilterWidget2 extends StatelessWidget {
         BlocProvider.of<SearchCubit>(context).changeSelectedButton2(index);
       },
       style: ElevatedButton.styleFrom(
-          backgroundColor: selectedButton2 == index?AppColors.onSecondary:Colors.white,
+          backgroundColor:
+              selectedButton2 == index ? AppColors.onSecondary : Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
               side: BorderSide(
-                //to change border color and stock
+                  //to change border color and stock
                   color: selectedButton2 == index
                       ? AppColors.tertiary.withOpacity(0.22)
                       : AppColors.secondary.withOpacity(0.12),

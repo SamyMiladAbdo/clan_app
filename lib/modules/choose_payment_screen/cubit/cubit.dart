@@ -6,7 +6,7 @@ class ChoosePaymentCubit extends Cubit<ChoosePaymentStates> {
   static ChoosePaymentCubit get(context) => BlocProvider.of(context);
 
   //TODO change options
-  List<String> options = ["isAvila", "fsjghd","pay when recived"];
+  List<String> options = ["isAvila", "fsjghd", "pay when recived"];
   String radioValue = "isAvila";
   void changeRadioValue(value) {
     radioValue = value;

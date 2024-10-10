@@ -58,5 +58,4 @@ class TermsAndPrivacyCubit extends Cubit<TermsAndPrivacyStates> {
     "حذف الحساب",
     "وظائف"
   ];
-
 }

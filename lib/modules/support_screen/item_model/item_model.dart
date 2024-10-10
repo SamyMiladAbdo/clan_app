@@ -1,3 +1,1 @@
-class Item{
-  
-}
+class Item {}

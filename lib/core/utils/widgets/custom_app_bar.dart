@@ -16,30 +16,33 @@ PreferredSizeWidget customAppBar({
   required context,
 }) =>
     AppBar(
-      leading: isleadingIcon?leading ??
-          InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Padding(
-              padding: EdgeInsetsDirectional.only(start: defaultPadding),
-              child: SvgPicture.asset(
-                AssetsData.arrowRight,
-                color: AppColors.black,
-                height: 26,
-                width: 21,
-              ),
-            ),
-          ):null,
+      leading: isleadingIcon
+          ? leading ??
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Padding(
+                  padding: EdgeInsetsDirectional.only(start: defaultPadding),
+                  child: SvgPicture.asset(
+                    AssetsData.arrowRight,
+                    color: AppColors.black,
+                    height: 26,
+                    width: 21,
+                  ),
+                ),
+              )
+          : null,
       leadingWidth: leadingWidth ?? 47,
-      title: titleWidget??Text(
-        title!,
-        style: const TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 18.0,
-          color: Colors.black,
-        ),
-      ),
+      title: titleWidget ??
+          Text(
+            title!,
+            style: const TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 18.0,
+              color: Colors.black,
+            ),
+          ),
       centerTitle: true,
       actions: isActionIcon
           ? [

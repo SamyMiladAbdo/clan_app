@@ -1,4 +1,5 @@
 import 'package:clan_app/core/constants/color.dart';
+import 'package:clan_app/core/network/local/cache_helper.dart';
 import 'package:clan_app/layout/cubit/cubit.dart';
 import 'package:clan_app/layout/cubit/states.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,12 @@ class LayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => LayoutCubit(),
+      create: (BuildContext context) {
+        if (CacheHelper.getData(key: "anonymousKey") == null)
+          return LayoutCubit()..getAnonymousKey();
+        else
+          return LayoutCubit();
+      },
       child: BlocConsumer<LayoutCubit, LayoutStates>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -28,14 +34,15 @@ class LayoutScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   fontSize: 10,
                   color: AppColors.gray),
-                  showUnselectedLabels: true,
-                  selectedItemColor: AppColors.black,
-                  unselectedItemColor: AppColors.gray,
+              showUnselectedLabels: true,
+              selectedItemColor: AppColors.black,
+              unselectedItemColor: AppColors.gray,
               selectedLabelStyle: const TextStyle(
-                  fontFamily: "Tajawal",
-                  fontWeight: FontWeight.w500,
-                  fontSize: 10,
-                  color: AppColors.black),
+                fontFamily: "Tajawal",
+                fontWeight: FontWeight.w500,
+                fontSize: 10,
+                color: AppColors.black,
+              ),
             ),
           );
         },

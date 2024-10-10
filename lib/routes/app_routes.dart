@@ -1,9 +1,11 @@
 import 'package:clan_app/layout/layout_screen.dart';
+import 'package:clan_app/models/address_model.dart';
 import 'package:clan_app/modules/add_new_address_screen/add_new_address.dart';
 import 'package:clan_app/modules/change_address_screen/change_address_screen.dart';
 import 'package:clan_app/modules/check_out_screen/check_out_screen.dart';
 import 'package:clan_app/modules/choose_payment_screen/choose_payment_screen.dart';
 import 'package:clan_app/modules/common_questions_screen/common_questions_screen.dart';
+import 'package:clan_app/modules/confirm_phone_screen/confirm_phone_screen.dart';
 import 'package:clan_app/modules/details_screen/details_screen.dart';
 import 'package:clan_app/modules/edit_account_screen/edit_account_screen.dart';
 import 'package:clan_app/modules/home_screen/home_screen.dart';
@@ -11,6 +13,7 @@ import 'package:clan_app/modules/loading_request_screen/loading_request_screen.d
 import 'package:clan_app/modules/my_addresses_screen/my_addresses_screen.dart';
 import 'package:clan_app/modules/search_screen/search_screen.dart';
 import 'package:clan_app/modules/show_all_offers_screen/show_all_offers.dart';
+import 'package:clan_app/modules/sign_up_screen/sign_up_screen.dart';
 import 'package:clan_app/modules/splash_screen/splash_screen.dart';
 import 'package:clan_app/modules/support_screen/support_screen.dart';
 import 'package:clan_app/modules/terms_and_privacy_screen/terms_and_privacy_screen.dart';
@@ -38,10 +41,12 @@ class AppRoutes {
   static String loadingRequestScreen = '/loading_request_screen';
   static String commonQuestionsScreen = '/common_questions_screen';
   static String termsAndPrivacyScreen = '/terms_and_privacy_screen';
+  static String testGoogleSignIn = '/test_google_sign_in';
+  static String confirmPhoneScreen = '/confirm_phone_screen';
 
   static Map<String, WidgetBuilder> routes = {
     initialRoute: (context) => const SplashScreen(
-          widget: LayoutScreen(),
+          widget: SignUpScreen(),
         ),
     splashScreen: (context) => const SplashScreen(
           widget: LayoutScreen(),
@@ -53,7 +58,13 @@ class AppRoutes {
     choosePaymentScreen: (context) => const ChoosePaymentScreen(),
     searchScreen: (context) => SearchScreen(),
     showAllOffersScreen: (context) => const ShowAllOffers(),
-    changeAddress: (context) => const ChangeAddressScreen(),
+    changeAddress: (context) {
+      AddressModel addressModel =
+          ModalRoute.of(context)!.settings.arguments as AddressModel;
+      return ChangeAddressScreen(
+        addressModel: addressModel,
+      );
+    },
     addNewAddressScreen: (context) => const AddNewAddress(),
     detailsScreen: (context) => const DetailsScreen(),
     myAddressesScreen: (context) => const MyAddressesScreen(),
@@ -63,5 +74,11 @@ class AppRoutes {
     loadingRequestScreen: (context) => const LoadingRequestScreen(),
     commonQuestionsScreen: (context) => const CommonQuestionsScreen(),
     termsAndPrivacyScreen: (context) => const TermsAndPrivacyScreen(),
+    confirmPhoneScreen: (context) {
+      String phoneNumber = ModalRoute.of(context)!.settings.arguments as String;
+      return ConfirmPhoneScreen(
+        phoneNumber: phoneNumber,
+      );
+    },
   };
 }

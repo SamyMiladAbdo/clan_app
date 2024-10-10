@@ -3,6 +3,7 @@ import 'package:clan_app/core/constants/color.dart';
 import 'package:clan_app/core/utils/widgets/custom_app_bar.dart';
 import 'package:clan_app/core/utils/widgets/custom_search_text_form_field.dart';
 import 'package:clan_app/core/utils/widgets/spacre_widget.dart';
+import 'package:clan_app/models/address_model.dart';
 import 'package:clan_app/modules/change_address_screen/change_address_screen.dart';
 import 'package:clan_app/modules/common_questions_screen/widgets/question_widget.dart';
 import 'package:clan_app/modules/terms_and_privacy_screen/cubit/cubit.dart';
@@ -75,7 +76,10 @@ class TermsAndPrivacyScreen extends StatelessWidget {
                                       context: context,
                                       backgroundColor: Colors.white,
                                       builder: (BuildContext context) =>
-                                          const ChangeAddressScreen());
+                                           ChangeAddressScreen(
+                                            //TODO show this
+                                            addressModel: AddressModel(),
+                                          ));
                                 },
                                 style: ButtonStyle(
                                   padding: WidgetStateProperty.resolveWith(

@@ -1,6 +1,8 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:clan_app/core/constants/assets.dart';
 import 'package:clan_app/core/constants/color.dart';
 import 'package:clan_app/core/constants/constants.dart';
+import 'package:clan_app/core/utils/custom_snack_bar.dart';
 import 'package:clan_app/core/utils/widgets/custom_elevated_button.dart';
 import 'package:clan_app/core/utils/widgets/spacre_widget.dart';
 import 'package:clan_app/routes/app_routes.dart';
@@ -59,6 +61,7 @@ class DownDialogWidget extends StatelessWidget {
                 ),
               ],
             ),
+            //TODO check this Vertical space correct or not
             const VerticalSpace(61.0),
             const Text(
               "تم التأكيد بنجاح",

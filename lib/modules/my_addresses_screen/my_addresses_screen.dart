@@ -5,6 +5,7 @@ import 'package:clan_app/core/utils/widgets/custom_divider.dart';
 import 'package:clan_app/core/utils/widgets/custom_elevated_button.dart';
 import 'package:clan_app/core/utils/widgets/spacre_widget.dart';
 import 'package:clan_app/modules/my_addresses_screen/widgets/address_widget.dart';
+import 'package:clan_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class MyAddressesScreen extends StatelessWidget {
@@ -29,7 +30,7 @@ class MyAddressesScreen extends StatelessWidget {
           width: double.infinity,
           child: CustomElevatedButton(
             onPressed: () {
-              // Navigator.pushNamed(context, AppRoutes.checkoutScreen);
+              Navigator.pushNamed(context, AppRoutes.addNewAddressScreen);
             },
             backgroundColor: AppColors.onSecondary,
             child: const Text(

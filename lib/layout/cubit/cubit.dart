@@ -1,5 +1,8 @@
 import 'package:clan_app/core/constants/assets.dart';
 import 'package:clan_app/core/constants/color.dart';
+import 'package:clan_app/core/network/end_points.dart';
+import 'package:clan_app/core/network/local/cache_helper.dart';
+import 'package:clan_app/core/network/remote/dio_helper.dart';
 import 'package:clan_app/layout/cubit/states.dart';
 import 'package:clan_app/modules/account_screen/account_screen.dart';
 import 'package:clan_app/modules/cart_screen/cart_screen.dart';
@@ -84,4 +87,21 @@ class LayoutCubit extends Cubit<LayoutStates> {
       ),
     ),
   ];
+
+  Future getAnonymousKey() async {
+    emit(GetAnonymousKeyLoadingState());
+    DioHelper.postData(
+      url: EndPoints.ANONYMOUS,
+      data: {},
+    ).then((value) {
+      print(value);
+      CacheHelper.putString(
+          key: "anonymousKey", value: value.data["fingerprint"]);
+      emit(GetAnonymousKeySuccessState());
+    }).catchError((error) {
+      print("Anonymous Key Error : ${error}");
+
+      emit(GetAnonymousKeyErrorState());
+    });
+  }
 }

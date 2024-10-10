@@ -175,7 +175,7 @@ class CheckOutScreen extends StatelessWidget {
                     ),
                     //cupons container
                     const CuponsWidget(),
-                    
+
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 22.0),
                       child: CustomDivider2(),
@@ -228,7 +228,7 @@ class CheckOutScreen extends StatelessWidget {
                             cubit.changeRadioValue(value);
                           }),
                     ),
-                    
+
                     //summary widget
                     const SummeryWidget(),
                     //to show the items under the bottom sheet
